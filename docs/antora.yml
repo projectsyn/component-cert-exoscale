@@ -1,0 +1,6 @@
+name: cert-exoscale
+title: Exoscale Cert-Manager Webhook
+version: master
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/partials/nav.adoc
