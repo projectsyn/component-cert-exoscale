@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  labels:
+    app: exoscale-webhook
+    chart: exoscale-webhook-0.3.0
+    heritage: Helm
+    release: exoscale-webhook
+  name: cert-manager-webhook-exoscale-ca
+  namespace: syn-cert-exoscale
+spec:
+  ca:
+    secretName: cert-manager-webhook-exoscale-ca
