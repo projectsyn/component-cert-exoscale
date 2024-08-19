@@ -11,6 +11,53 @@ default:: `syn-cert-exoscale`
 The namespace in which to deploy this component.
 
 
+== `kustomizeInput`
+
+[horizontal]
+type:: string
+default::
++
+[source,yaml]
+----
+namespace: ${cert_exoscale:namespace}
+----
+
+Values passed to Kustomize.
+
+See https://github.com/exoscale/cert-manager-webhook-exoscale/tree/master/deploy/exoscale-webhook-kustomize[Upstream Kustomize].
+
+
+== `secret`
+
+[horizontal]
+type:: string
+default::
++
+[source,yaml]
+----
+accessKey: '?{vaultkv:${cluster:tenant}/${cluster:name}/exoscale/cert_webhook/s3_access_key}'
+secretKey: '?{vaultkv:${cluster:tenant}/${cluster:name}/exoscale/cert_webhook/s3_secret_key}'
+----
+
+The API access key and secret key for managing DNS records.
+
+See https://www.exoscale.com/syslog/cert-manager-webhook-exoscale/[Exoscale Documentation].
+
+=== Create API Key
+
+[source,yaml]
+----
+exo iam access-key create \
+  --operation list-dns-domains \
+  --operation list-dns-domain-records \
+  --operation  get-dns-domain-record \
+  --operation get-operation \
+  --operation create-dns-domain-record \
+  --operation delete-dns-domain-record \
+  cert-manager-webhook-key
+----
+
+
 == Example
 
 [source,yaml]

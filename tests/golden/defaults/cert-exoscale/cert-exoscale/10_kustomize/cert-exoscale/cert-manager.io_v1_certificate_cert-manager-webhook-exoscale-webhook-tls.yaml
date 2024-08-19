@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  labels:
+    app: exoscale-webhook
+    chart: exoscale-webhook-0.3.0
+    heritage: Helm
+    release: exoscale-webhook
+  name: cert-manager-webhook-exoscale-webhook-tls
+  namespace: syn-cert-exoscale
+spec:
+  dnsNames:
+  - cert-manager-webhook-exoscale
+  - cert-manager-webhook-exoscale.syn-cert-exoscale
+  - cert-manager-webhook-exoscale.syn-cert-exoscale.svc
+  duration: 8760h0m0s
+  issuerRef:
+    name: cert-manager-webhook-exoscale-ca
+  secretName: cert-manager-webhook-exoscale-webhook-tls
