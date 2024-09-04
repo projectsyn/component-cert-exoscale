@@ -3,11 +3,11 @@ kind: Deployment
 metadata:
   labels:
     app: exoscale-webhook
-    chart: exoscale-webhook-0.3.0
+    chart: exoscale-webhook-0.3.2
     heritage: Helm
     release: exoscale-webhook
   name: cert-manager-webhook-exoscale
-  namespace: syn-cert-exoscale
+  namespace: syn-cert-manager
 spec:
   replicas: 1
   selector:
@@ -32,7 +32,7 @@ spec:
           value: ""
         - name: EXOSCALE_API_TRACE
           value: ""
-        image: docker.io/exoscale/cert-manager-webhook-exoscale:0.3.0
+        image: docker.io/exoscale/cert-manager-webhook-exoscale:0.3.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:

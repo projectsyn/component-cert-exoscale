@@ -5,18 +5,6 @@ local inv = kap.inventory();
 
 // The hiera parameters for the component
 local params = inv.parameters.cert_exoscale;
-local isOpenshift = std.member([ 'openshift', 'oke' ], inv.parameters.facts.distribution);
-
-local namespace = kube.Namespace(params.namespace) {
-  metadata+: {
-    labels+: {
-      'app.kubernetes.io/name': params.namespace,
-      // Configure the namespaces so that the OCP4 cluster-monitoring
-      // Prometheus can find the servicemonitors and rules.
-      [if isOpenshift then 'openshift.io/cluster-monitoring']: 'true',
-    },
-  },
-};
 
 local secret = kube.Secret('exoscale-secret') {
   metadata+: {
@@ -30,6 +18,5 @@ local secret = kube.Secret('exoscale-secret') {
 
 // Define outputs below
 {
-  '00_namespace': namespace,
   '20_secret': secret,
 }

@@ -1,9 +1,9 @@
 parameters:
   cert_exoscale:
     =_metadata: {}
-    namespace: syn-cert-exoscale
+    namespace: syn-cert-manager
 
-    manifestVersion: v0.3.0
+    manifestVersion: v${cert_exoscale:images:webhook:tag}
     kustomizeInput:
       namespace: ${cert_exoscale:namespace}
 
@@ -11,7 +11,7 @@ parameters:
       webhook:
         registry: docker.io
         repository: exoscale/cert-manager-webhook-exoscale
-        tag: 0.3.0
+        tag: 0.3.2
 
     secret:
       accessKey: '?{vaultkv:${cluster:tenant}/${cluster:name}/exoscale/cert_webhook/s3_access_key}'

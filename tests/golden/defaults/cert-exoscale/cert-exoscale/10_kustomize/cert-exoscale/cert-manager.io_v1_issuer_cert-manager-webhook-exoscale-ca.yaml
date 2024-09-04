@@ -3,11 +3,11 @@ kind: Issuer
 metadata:
   labels:
     app: exoscale-webhook
-    chart: exoscale-webhook-0.3.0
+    chart: exoscale-webhook-0.3.2
     heritage: Helm
     release: exoscale-webhook
   name: cert-manager-webhook-exoscale-ca
-  namespace: syn-cert-exoscale
+  namespace: syn-cert-manager
 spec:
   ca:
     secretName: cert-manager-webhook-exoscale-ca
