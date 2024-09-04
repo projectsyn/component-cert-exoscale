@@ -1,7 +1,7 @@
 parameters:
   cert_exoscale:
     =_metadata: {}
-    namespace: syn-cert-exoscale
+    namespace: syn-cert-manager
 
     manifestVersion: v0.3.0
     kustomizeInput:

@@ -7,6 +7,6 @@ metadata:
     heritage: Helm
     release: exoscale-webhook
   name: cert-manager-webhook-exoscale-selfsign
-  namespace: syn-cert-exoscale
+  namespace: syn-cert-manager
 spec:
   selfSigned: {}

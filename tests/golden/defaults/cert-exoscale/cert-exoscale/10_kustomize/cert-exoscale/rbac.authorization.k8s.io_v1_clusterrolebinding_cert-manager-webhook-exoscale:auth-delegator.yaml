@@ -15,4 +15,4 @@ subjects:
 - apiGroup: ""
   kind: ServiceAccount
   name: cert-manager-webhook-exoscale
-  namespace: syn-cert-exoscale
+  namespace: syn-cert-manager

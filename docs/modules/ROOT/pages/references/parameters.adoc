@@ -2,14 +2,6 @@
 
 The parent key for all of the following parameters is `cert_exoscale`.
 
-== `namespace`
-
-[horizontal]
-type:: string
-default:: `syn-cert-exoscale`
-
-The namespace in which to deploy this component.
-
 
 == `kustomizeInput`
 

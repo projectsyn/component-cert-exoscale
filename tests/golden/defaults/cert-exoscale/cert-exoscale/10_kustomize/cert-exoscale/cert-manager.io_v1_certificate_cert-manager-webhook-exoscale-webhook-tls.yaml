@@ -7,12 +7,12 @@ metadata:
     heritage: Helm
     release: exoscale-webhook
   name: cert-manager-webhook-exoscale-webhook-tls
-  namespace: syn-cert-exoscale
+  namespace: syn-cert-manager
 spec:
   dnsNames:
   - cert-manager-webhook-exoscale
-  - cert-manager-webhook-exoscale.syn-cert-exoscale
-  - cert-manager-webhook-exoscale.syn-cert-exoscale.svc
+  - cert-manager-webhook-exoscale.syn-cert-manager
+  - cert-manager-webhook-exoscale.syn-cert-manager.svc
   duration: 8760h0m0s
   issuerRef:
     name: cert-manager-webhook-exoscale-ca
