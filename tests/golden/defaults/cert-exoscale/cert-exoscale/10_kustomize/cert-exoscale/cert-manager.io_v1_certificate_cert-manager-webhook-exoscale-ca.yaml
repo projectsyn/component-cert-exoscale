@@ -7,9 +7,9 @@ metadata:
     heritage: Helm
     release: exoscale-webhook
   name: cert-manager-webhook-exoscale-ca
-  namespace: syn-cert-exoscale
+  namespace: syn-cert-manager
 spec:
-  commonName: ca.exoscale-webhook.syn-cert-exoscale
+  commonName: ca.exoscale-webhook.syn-cert-manager
   duration: 43800h0m0s
   isCA: true
   issuerRef:

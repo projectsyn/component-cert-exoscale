@@ -2,7 +2,7 @@ apiVersion: apiregistration.k8s.io/v1
 kind: APIService
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: syn-cert-exoscale/cert-manager-webhook-exoscale-webhook-tls
+    cert-manager.io/inject-ca-from: syn-cert-manager/cert-manager-webhook-exoscale-webhook-tls
   labels:
     app: exoscale-webhook
     chart: exoscale-webhook-0.3.0
@@ -14,6 +14,6 @@ spec:
   groupPriorityMinimum: 1000
   service:
     name: cert-manager-webhook-exoscale
-    namespace: syn-cert-exoscale
+    namespace: syn-cert-manager
   version: v1alpha1
   versionPriority: 15
