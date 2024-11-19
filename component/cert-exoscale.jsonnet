@@ -51,6 +51,35 @@ local certExoscale = com.Kustomization(
       },
       {
         target: {
+          kind: 'Role',
+          name: 'cert-manager-webhook-exoscale:secrets-reader',
+        },
+        patch: |||
+          - op: replace
+            path: /kind
+            value: ClusterRole
+          - op: remove
+            path: /metadata/namespace
+        |||,
+      },
+      {
+        target: {
+          kind: 'RoleBinding',
+          name: 'cert-manager-webhook-exoscale:secrets-reader',
+        },
+        patch: |||
+          - op: replace
+            path: /kind
+            value: ClusterRoleBinding
+          - op: remove
+            path: /metadata/namespace
+          - op: replace
+            path: /roleRef/kind
+            value: ClusterRole
+        |||,
+      },
+      {
+        target: {
           kind: 'APIService',
           name: 'v1alpha1.acme.exoscale.com',
         },
