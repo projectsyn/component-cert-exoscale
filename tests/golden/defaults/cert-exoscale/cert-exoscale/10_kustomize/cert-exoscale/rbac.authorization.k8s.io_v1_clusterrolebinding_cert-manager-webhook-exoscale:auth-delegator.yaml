@@ -3,7 +3,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: exoscale-webhook
-    chart: exoscale-webhook-0.3.0
+    chart: exoscale-webhook-0.3.2
     heritage: Helm
     release: exoscale-webhook
   name: cert-manager-webhook-exoscale:auth-delegator

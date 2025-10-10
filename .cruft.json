@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/projectsyn/commodore-component-template.git",
-  "commit": "95d2dbb90105a97114f46c9192b7ae146cbfaec0",
+  "commit": "84a7c63ca26492da555344c23ccddac302ba0bb2",
   "checkout": "main",
   "context": {
     "cookiecutter": {
@@ -24,7 +24,8 @@
       "github_owner": "projectsyn",
       "github_name": "component-cert-exoscale",
       "github_url": "https://github.com/projectsyn/component-cert-exoscale",
-      "_template": "https://github.com/projectsyn/commodore-component-template.git"
+      "_template": "https://github.com/projectsyn/commodore-component-template.git",
+      "_commit": "84a7c63ca26492da555344c23ccddac302ba0bb2"
     }
   },
   "directory": null
