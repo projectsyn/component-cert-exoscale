@@ -1,6 +1,12 @@
 parameters:
   cert_exoscale:
-    =_metadata: {}
+    =_metadata:
+      deprecated: True
+      replaced_by: cert-manager
+      deprecation_notice: >-
+        The functionality of this component has been moved to the cert-manager component.
+        See https://hub.syn.tools/cert-manager/references/parameters.html#_component_exoscale_webhook
+
     namespace: syn-cert-manager
 
     manifestVersion: v${cert_exoscale:images:webhook:tag}

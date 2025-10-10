@@ -1,3 +1,10 @@
+# :warning: Repo Archive Notice
+
+As of October 10, 2025, this component is deprecated and will no longer be updated.
+Use component [cert-manager](https://github.com/projectsyn/component-cert-manager) instead of this component.
+
+See https://hub.syn.tools/cert-manager/references/parameters.html#_component_exoscale_webhook.
+
 # Commodore Component: Exoscale Cert-Manager Webhook
 
 This is a [Commodore][commodore] Component for Exoscale Cert-Manager Webhook.
