@@ -13,6 +13,10 @@ local app = argocd.App('cert-exoscale', params.namespace) {
   },
 };
 
+local appPath =
+  local project = std.get(std.get(app, 'spec', {}), 'project', 'syn');
+  if project == 'syn' then 'apps' else 'apps-%s' % project;
+
 {
-  'cert-exoscale': app,
+  ['%s/cert-exoscale' % appPath]: app,
 }
