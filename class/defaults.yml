@@ -1,7 +1,7 @@
 parameters:
   cert_exoscale:
     =_metadata:
-      deprecated: True
+      deprecated: true
       replaced_by: cert-manager
       deprecation_notice: >-
         The functionality of this component has been moved to the cert-manager component.
